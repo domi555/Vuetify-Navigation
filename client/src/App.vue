@@ -37,7 +37,9 @@
       <v-btn active-class="amber darken-2" to="/products" exact class="ml-5"
         >Products</v-btn
       >
-      <v-btn active-class="amber darken-2" to="/about" exact class="ml-5">About</v-btn>
+      <v-btn active-class="amber darken-2" to="/about" exact class="ml-5"
+        >About</v-btn
+      >
     </v-app-bar>
     <v-main>
       <div class="d-flex">
