@@ -33,14 +33,67 @@
         >A Dog With a Mission</span
       >
       <v-spacer></v-spacer>
-      <v-btn active-class="amber darken-2" to="/" exact>Home</v-btn>
-      <v-btn active-class="amber darken-2" to="/products" exact class="ml-5"
-        >Products</v-btn
-      >
-      <v-btn active-class="amber darken-2" to="/about" exact class="ml-5"
-        >About</v-btn
-      >
+      <div class="hidden-sm-and-down">
+        <v-btn active-class="amber darken-2" class="custom-bg" to="/" exact
+          >Home</v-btn
+        >
+        <v-btn
+          active-class="amber darken-2"
+          class="ml-5 custom-bg"
+          to="/products"
+          exact
+          >Products</v-btn
+        >
+        <v-btn
+          active-class="amber darken-2"
+          class="ml-5 custom-bg"
+          to="/about"
+          exact
+          >About</v-btn
+        >
+      </div>
+
+      <v-app-bar-nav-icon
+        @click.stop="drawer = !drawer"
+        class="hidden-md-and-up grey darken-3 white--text"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
+
+    <v-navigation-drawer
+      class="hidden-md-and-up"
+      app
+      hide-overlay
+      disable-resize-watcher
+      v-model="drawer"
+      right
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Menu
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            Please select
+          </v-list-item-subtitle>
+        </v-list-item-content>
+        <v-btn text @click="drawer = false" class="grey darken-3 white--text mdi-close"></v-btn>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list-item-group>
+        <v-list-item
+          active-class="amber darken-2 white--text"
+          link
+          v-for="(route, i) of routes"
+          :key="i"
+          :to="route.to"
+        >
+          {{ route.name }}
+        </v-list-item>
+      </v-list-item-group>
+    </v-navigation-drawer>
+
     <v-main>
       <div class="d-flex">
         <div style="width:250px"></div>
@@ -57,13 +110,18 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    routes: [
+      { name: 'Home', to: '/' },
+      { name: 'Products', to: '/products' },
+      { name: 'About', to: '/about' },
+    ],
+    drawer: false,
   }),
 };
 </script>
 
 <style scoped>
-a:not(active-class) {
+.custom-bg:not(active-class) {
   color: #ffffff !important;
   background-color: #333333 !important;
 }

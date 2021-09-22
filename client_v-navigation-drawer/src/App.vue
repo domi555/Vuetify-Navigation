@@ -3,12 +3,13 @@
     <v-app-bar class="blue" app>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
-        class="white--text"
+        class="white--text hidden-md-and-up"
       ></v-app-bar-nav-icon>
       <span class="white--text title">Layout Demo</span>
     </v-app-bar>
 
     <v-navigation-drawer
+      class="hidden-md-and-up"
       app
       hide-overlay
       disable-resize-watcher
@@ -30,7 +31,7 @@
 
       <v-list-item-group>
         <v-list-item
-          active-class="blue lighten-2 white--text"
+          active-class="blue white--text"
           link
           v-for="(route, i) of routes"
           :key="i"
