@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!-- Aufgabe (1) -->
     <!-- <v-navigation-drawer class="green" app>
       <span class="white--text title">v-navigation-drawer</span>
     </v-navigation-drawer>
@@ -15,17 +16,16 @@
     <v-bottom-navigation class="cyan" app>
       <span class="white--text title">v-bottom-navigation</span>
     </v-bottom-navigation> -->
-
-    <!--(1)-->
     <!-- <v-system-bar class="pink" app>
       <span class="white--text title">v-system-bar</span>
     </v-system-bar> -->
 
-    <v-app-bar class="grey lighten-5" height="74" app>
+    <!-- Aufgabe (2 und 4) -->
+    <v-app-bar height="74" app>
       <img
         class="mx-2"
         src="images/fearlessfido-logo.svg"
-        style="height:150px; margin-top:100px"
+        style="height: 150px; margin-top: 100px"
       />
       <span
         class="text-truncate text-h4 blue-grey--text darken-1"
@@ -33,7 +33,7 @@
         >A Dog With a Mission</span
       >
       <v-spacer></v-spacer>
-      <div class="hidden-sm-and-down">
+      <div class="hidden-md-and-down">
         <v-btn active-class="amber darken-2" class="custom-bg" to="/" exact
           >Home</v-btn
         >
@@ -55,12 +55,12 @@
 
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
-        class="hidden-md-and-up grey darken-3 white--text"
+        class="mr-1 hidden-lg-and-up grey darken-3 white--text"
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-navigation-drawer
-      class="hidden-md-and-up"
+      class="hidden-lg-and-up"
       app
       hide-overlay
       disable-resize-watcher
@@ -117,6 +117,7 @@ export default {
       { name: 'Products', to: '/products' },
       { name: 'About', to: '/about' },
     ],
+
     drawer: false,
   }),
 };

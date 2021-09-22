@@ -1,15 +1,15 @@
 <template>
   <v-app>
+    <!-- Aufgabe (3) -->
     <v-app-bar class="blue" app>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
-        class="white--text hidden-md-and-up"
+        class="white--text"
       ></v-app-bar-nav-icon>
       <span class="white--text title">Layout Demo</span>
     </v-app-bar>
 
     <v-navigation-drawer
-      class="hidden-md-and-up"
       app
       hide-overlay
       disable-resize-watcher
@@ -61,6 +61,7 @@ export default {
       { name: 'Team', to: '/team' },
       { name: 'About', to: '/about' },
     ],
+
     drawer: false,
   }),
 };

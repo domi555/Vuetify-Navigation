@@ -1,10 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar class="grey lighten-5" height="74" app>
+    <!-- Aufgabe (5) -->
+    <v-app-bar height="74" app>
       <img
         class="mx-2"
         src="images/fearlessfido-logo.svg"
-        style="height:150px; margin-top:100px"
+        style="height: 150px; margin-top: 100px"
       />
       <span
         class="text-truncate text-h4 blue-grey--text darken-1"
@@ -31,9 +32,7 @@
                   </v-list-item-avatar>
 
                   <v-list-item-content>
-                    <v-list-item-title
-                      class="text-subtitle-1 font-weight-bold"
-                    >
+                    <v-list-item-title class="text-subtitle-1 font-weight-bold">
                       Your Trainer
                     </v-list-item-title>
                   </v-list-item-content>
