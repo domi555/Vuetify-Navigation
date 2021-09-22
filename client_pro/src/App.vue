@@ -32,7 +32,7 @@
 
                   <v-list-item-content>
                     <v-list-item-title
-                      class="text-subtitle-1 font-weight-regular"
+                      class="text-subtitle-1 font-weight-bold"
                     >
                       Your Trainer
                     </v-list-item-title>
@@ -59,7 +59,7 @@
             </v-navigation-drawer>
           </div>
         </div>
-        <div class="mt-10" style="flex:1">
+        <div class="mt-10 mr-5" style="flex:1">
           <router-view></router-view>
         </div>
       </div>
