@@ -29,22 +29,21 @@
       <v-divider></v-divider>
 
       <v-list-item-group>
-        <!-- <v-list-item
+        <v-list-item
+          active-class="blue lighten-2 white--text"
           link
           v-for="(route, i) of routes"
           :key="i"
-          :to="route.link"
+          :to="route.to"
         >
-          {{ link }}
-        </v-list-item> -->
+          {{ route.name }}
+        </v-list-item>
       </v-list-item-group>
     </v-navigation-drawer>
 
     <v-main>
-      <div class="d-flex">
-        <div class="mt-10" style="flex:1">
-          <router-view></router-view>
-        </div>
+      <div class="ma-5">
+        <router-view></router-view>
       </div>
     </v-main>
   </v-app>
@@ -55,6 +54,12 @@ export default {
   name: 'App',
 
   data: () => ({
+    routes: [
+      { name: 'Home', to: '/' },
+      { name: 'Products', to: '/products' },
+      { name: 'Team', to: '/team' },
+      { name: 'About', to: '/about' },
+    ],
     drawer: false,
   }),
 };
