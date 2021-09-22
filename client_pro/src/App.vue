@@ -82,7 +82,7 @@ export default {
 
 <style scoped>
 .custom-bg:not(active-class) {
-  color: #ffffff !important;
-  background-color: #333333 !important;
+  color: #fff !important;
+  background-color: #333 !important;
 }
 </style>
